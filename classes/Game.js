@@ -109,17 +109,3 @@ Game.prototype.start = function () {
     eMan.attachInitialListeners(activePlayer);
   }
 };
-
-Game.prototype.checkFlag = function (flag) {
-  const self = this;
-  if (!flag) {
-    console.log("waiting for selection");
-    window.setTimeout(
-      self.checkFlag,
-      1000
-    ); /* this checks the flag every 100 milliseconds*/
-  } else {
-    /* do something*/
-    console.log("a move has been selected");
-  }
-};
