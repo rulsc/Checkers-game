@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Checkers</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="data/initialData.js"></script>
+    <script src="classes/board/Board.js"></script>
+    <script src="classes/board/Checker.js"></script>
+    <script src="classes/board/Row.js"></script>
+    <script src="classes/board/Square.js"></script>
+    <script src="classes/movement/Jump.js"></script>
+    <script src="classes/movement/Move.js"></script>
+    <script src="classes/utility/EventManager.js"></script>
+    <script src="classes/Player.js"></script>
+    <script src="classes/Game.js"></script>
+  </head>
+  <body>
+    <form action="" id="board"></form>
+    <script>
+      const game = new Game(initialData);
+      game.init();
+    </script>
+  </body>
+</html>
