@@ -7,11 +7,9 @@ EventManager.prototype.attachInitialListeners = function (player) {
   const squares = player.activeSquares;
   let el = null;
 
-  console.log("attaching selection listeners for " + player.color);
   self.attachSelectionListeners(player);
 
   squares.forEach((square) => {
-    console.log(square);
     el = document.querySelector(`[data-square-num=\"${square.squareNum}\"]`);
     el.addEventListener("click", function (e) {
       e.stopImmediatePropagation();
@@ -19,7 +17,6 @@ EventManager.prototype.attachInitialListeners = function (player) {
     });
 
     el.classList.add("highlight");
-    console.log(el);
   });
 };
 
@@ -31,9 +28,6 @@ EventManager.prototype.attachSelectionListeners = function (player) {
   document.querySelectorAll(".highlight").forEach((el) => {
     if (!el.firstChild) self.removeAllListeners(el);
   });
-
-  console.log("here are " + player.color + " active squares");
-  console.log(squares);
 
   squares.forEach((square) => {
     el = document.querySelector(`[data-square-num=\"${square.squareNum}\"]`);
@@ -101,7 +95,6 @@ EventManager.prototype.attachMovementListeners = function (player) {
         if (player.jumps.length) {
           player.updateActiveSquares.call(player, jump.end);
           self.removeAllListeners();
-          console.log("attempting recursion");
           return self.attachInitialListeners(player);
         } else {
           player.endTurn();
@@ -116,13 +109,9 @@ EventManager.prototype.attachMovementListeners = function (player) {
 EventManager.prototype.removeAllListeners = function (elem = null) {
   if (elem) {
     elem.classList.remove("highlight");
-    console.log("removed highlight from");
-    console.log(elem);
     elem.replaceWith(elem.cloneNode(true));
   } else {
     document.querySelectorAll(".highlight").forEach((el) => {
-      console.log("removing all listeners");
-      console.log(el.classList);
       el.classList.remove("highlight");
       el.replaceWith(el.cloneNode(true));
     });
