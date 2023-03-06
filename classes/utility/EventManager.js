@@ -74,7 +74,9 @@ EventManager.prototype.attachMovementListeners = function (player) {
     for (let i = 0; i < jumps.length; i++) {
       jump = jumps[i];
       if (
+        player.startSquare &&
         jump.start.squareNum === player.startSquare.squareNum &&
+        player.endSquare &&
         jump.end.squareNum === player.endSquare.squareNum
       ) {
         isKing = player.startSquare.checker.isKing;
