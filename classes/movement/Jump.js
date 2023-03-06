@@ -35,8 +35,6 @@ Jump.prototype.kingCheck = function () {
   if (color === "black") {
     if (endRow === 8) {
       this.end.checker.crown();
-    } else {
-      console.log("no need to crown king");
     }
   } else {
     if (endRow === 1) {

@@ -964,7 +964,6 @@ Player.prototype.findMoves = function (rows) {
       }
     }
   }
-  //console.log(this.moves);
 };
 
 Player.prototype.clearJumps = function () {
@@ -997,7 +996,6 @@ Player.prototype.deselectSquares = function (modifier = "start") {
 };
 
 Player.prototype.selectSquare = function (square) {
-  console.log(square);
   if (square.checker) {
     this.deselectSquares();
     this.startSquare = square;
@@ -1047,8 +1045,6 @@ Player.prototype.updateActiveSquares = function (square = null) {
         }
       }
     });
-  } else {
-    console.log("player has no jumps or moves");
   }
 };
 
@@ -1058,5 +1054,4 @@ Player.prototype.endTurn = function () {
   this.clearMoves();
   this.clearJumps();
   this.incrementTurnCount();
-  console.log(this.color + "'s turnCount is now " + this.turnCount);
 };
