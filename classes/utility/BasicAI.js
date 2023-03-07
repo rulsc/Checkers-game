@@ -6,25 +6,25 @@ function BasicAI(player) {
 
 BasicAI.prototype.move = function () {
   const player = this.player;
+  let randomNum;
+  let activeSquares;
+  let activeEmptySquares;
   const intervalId = setInterval(function () {
     if (player.isActive) {
-      let activeSquares = [...document.getElementsByClassName("highlight")];
-      let randomNum = Math.floor(
-        Math.random() * (activeSquares.length - 1) + 1
-      );
-      let activeEmptySquares = [];
-      activeSquares[randomNum - 1].click();
       activeSquares = [...document.getElementsByClassName("highlight")];
       activeEmptySquares = [];
+      randomNum = Math.floor(Math.random() * activeSquares.length);
+      activeSquares[randomNum].click();
+      activeSquares = [...document.getElementsByClassName("highlight")];
       activeSquares.forEach((el) => {
         if (!el.firstChild) {
-          activeEmptySquares = [...activeEmptySquares, el];
+          activeEmptySquares.push(el);
         }
       });
-      randomNum = Math.floor(
-        Math.random() * (activeEmptySquares.length - 1) + 1
-      );
-      activeEmptySquares[randomNum - 1].click();
+      randomNum = Math.floor(Math.random() * activeEmptySquares.length);
+      activeEmptySquares[randomNum].click();
+      activeSquares = [];
+      activeEmptySquares = [];
     } else {
       clearInterval(intervalId);
     }
