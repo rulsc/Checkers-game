@@ -9,6 +9,8 @@ function Game(data) {
 }
 
 Game.prototype.init = function () {
+  this.basicAI = new BasicAI(this.players[2]);
+  this.players[2].isAI = true;
   this.board.draw();
   this.start();
 };
@@ -67,10 +69,16 @@ Game.prototype.nextTurn = function () {
     } else {
       activePlayer.updateActiveSquares();
       eMan.attachInitialListeners(activePlayer);
+      if (activePlayer.isAI) {
+        this.basicAI.move();
+      }
     }
   } else {
     activePlayer.updateActiveSquares();
     eMan.attachInitialListeners(activePlayer);
+    if (activePlayer.isAI) {
+      this.basicAI.move();
+    }
   }
 };
 
