@@ -74,7 +74,14 @@ body {
 
 .highlight .checker {
   animation: spin 4s linear infinite;
-  border: 2px dashed #fff;
+}
+
+.highlight .black {
+  border: 0.15em dashed #fff;
+}
+
+.highlight .red {
+  border: 0.15em dashed #222;
 }
 
 @keyframes spin {

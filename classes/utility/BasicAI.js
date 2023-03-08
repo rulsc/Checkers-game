@@ -8,7 +8,8 @@ BasicAI.prototype.raiseCover = function () {
 };
 
 BasicAI.prototype.lowerCover = function () {
-  document.getElementById("ai-cover").classList.remove("ai-cover");
+  const aiCover = document.getElementById("ai-cover");
+  aiCover.classList.remove("ai-cover");
 };
 
 BasicAI.prototype.move = function () {
