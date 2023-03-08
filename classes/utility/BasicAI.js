@@ -25,23 +25,22 @@ BasicAI.prototype.move = function () {
       activeEmptySquares = [];
       randomNum = Math.floor(Math.random() * activeSquares.length);
       activeSquares[randomNum].click();
-
-      setTimeout(function () {
-        activeSquares = [...document.getElementsByClassName("highlight")];
-        activeSquares.forEach((el) => {
-          if (!el.firstChild) {
-            activeEmptySquares.push(el);
-          }
-        });
-        randomNum = Math.floor(Math.random() * activeEmptySquares.length);
-        activeEmptySquares[randomNum].click();
-      }, 500);
-
+      activeEmptySquares = [];
+      randomNum = Math.floor(Math.random() * activeSquares.length);
+      activeSquares[randomNum].click();
+      activeSquares = [...document.getElementsByClassName("highlight")];
+      activeSquares.forEach((el) => {
+        if (!el.firstChild) {
+          activeEmptySquares.push(el);
+        }
+      });
+      randomNum = Math.floor(Math.random() * activeEmptySquares.length);
+      activeEmptySquares[randomNum].click();
       activeSquares = [];
       activeEmptySquares = [];
     } else {
       self.lowerCover();
       clearInterval(intervalId);
     }
-  }, 1000);
+  }, 500);
 };
