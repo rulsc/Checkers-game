@@ -44,7 +44,7 @@ body {
   display: block;
   width: 79%;
   height: 79%;
-  margin: 9%;
+  margin: 8%;
 }
 
 .black {
@@ -92,7 +92,7 @@ body {
 
 .king {
   opacity: 0.5;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Crown_of_the_Kingdom_of_Greece.svg/80px-Crown_of_the_Kingdom_of_Greece.svg.png");
+  background-image: url("./images/80px-Crown_of_the_Kingdom_of_Greece.svg.png");
 }
 
 .ai-cover {
