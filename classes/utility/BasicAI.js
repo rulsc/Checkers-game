@@ -25,9 +25,6 @@ BasicAI.prototype.move = function () {
       activeEmptySquares = [];
       randomNum = Math.floor(Math.random() * activeSquares.length);
       activeSquares[randomNum].click();
-      activeEmptySquares = [];
-      randomNum = Math.floor(Math.random() * activeSquares.length);
-      activeSquares[randomNum].click();
       activeSquares = [...document.getElementsByClassName("highlight")];
       activeSquares.forEach((el) => {
         if (!el.firstChild) {
