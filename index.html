@@ -23,6 +23,30 @@
       <form action="" id="board"></form>
       <div id="ai-cover"></div>
     </div>
+    <h3>Checkers Rules</h3>
+    <p>
+      Only dark squares are used. A piece can only move diagonally into an
+      unoccupied square. When capturing an opponent's piece is possible,
+      <span>capturing is mandatory</span>.
+    </p>
+    <p>
+      A man moves one step diagonally forwards and captures an adjacent
+      opponent's piece by jumping over it and landing on the next square.
+      Multiple enemy pieces can be captured in a single turn provided this is
+      done by successive jumps made by a single piece; the jumps do not need to
+      be in the same line and may zigzag. In American checkers, men can jump
+      only forwards.
+    </p>
+    <p>
+      When a man reaches the farthest row forward, it becomes a king. It is
+      marked by crowning.
+      <span
+        >The king has additional powers, including the ability to move and
+        capture backwards</span
+      >. Like a man, a king can make successive jumps in a single turn, provided
+      each jump captures an enemy piece.
+    </p>
+    <p>Source: <a href="https://en.wikipedia.org/wiki/Checkers">Checkers</a></p>
     <script>
       const game = new Game(initialData);
       game.init();

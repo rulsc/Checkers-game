@@ -1,3 +1,15 @@
+h3,
+p {
+  text-align: center;
+  font-family: arial, verdana;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+span {
+  text-decoration: underline;
+}
+
 form {
   width: 348px;
   margin: 0 auto;
