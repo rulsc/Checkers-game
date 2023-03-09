@@ -25,6 +25,7 @@ BasicAI.prototype.move = function () {
       activeEmptySquares = [];
       randomNum = Math.floor(Math.random() * activeSquares.length);
       activeSquares[randomNum].click();
+      activeSquares = [];
       activeSquares = [...document.getElementsByClassName("highlight")];
       activeSquares.forEach((el) => {
         if (!el.firstChild) {
@@ -36,8 +37,8 @@ BasicAI.prototype.move = function () {
       activeSquares = [];
       activeEmptySquares = [];
     } else {
-      self.lowerCover();
       clearInterval(intervalId);
+      self.lowerCover();
     }
   }, 500);
 };
