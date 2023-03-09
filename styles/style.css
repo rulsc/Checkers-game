@@ -45,7 +45,7 @@ fieldset {
   display: block;
   width: 79%;
   height: 79%;
-  margin: 8%;
+  margin: 6%;
 }
 
 .black {
@@ -94,6 +94,7 @@ fieldset {
 .king {
   opacity: 0.5;
   background-image: url("./images/80px-Crown_of_the_Kingdom_of_Greece.svg.png");
+  transform: rotate(180deg);
 }
 
 .ai-cover {
