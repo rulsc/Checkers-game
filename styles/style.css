@@ -7,8 +7,9 @@ fieldset {
   width: 320px;
 }
 
-body {
+#container {
   position: relative;
+  transform: rotateX(180deg);
 }
 
 .row {
