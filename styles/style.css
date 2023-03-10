@@ -1,16 +1,11 @@
-h3,
-p {
-  margin-left: 5%;
-  margin-right: 5%;
+h3 {
+  font-family: tahoma, helvetica, sans-serif;
   text-align: center;
 }
 
-h3 {
-  font-family: tahoma, helvetica, sans-serif;
-}
-
-p {
+blockquote {
   font-family: garamond, georgia, serif;
+  text-align: justify;
 }
 
 form {
