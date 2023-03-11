@@ -1021,10 +1021,7 @@ Player.prototype.updateActiveSquares = function (square = null) {
         uniqueSquareNums.add(startSquareNum);
         this.activeSquares.push(jump.start);
       }
-      // if (!uniqueSquareNums.has(endSquareNum)) {
-      //   uniqueSquareNums.add(endSquareNum);
-      //   this.activeSquares.push(jump.end);
-      // }
+
       if (this.startSquare) {
         if (startSquareNum === this.startSquare.squareNum) {
           if (!uniqueSquareNums.has(endSquareNum)) {

@@ -1,5 +1,6 @@
 function Game(data) {
-  this.data = { ...data };
+  this.data = data;
+  this.dataCopy = JSON.parse(JSON.stringify(data));
   this.players = {
     1: new Player(this.data.players[1].color, this.data.players[1].isActive),
     2: new Player(this.data.players[2].color, this.data.players[2].isActive),
@@ -7,6 +8,17 @@ function Game(data) {
   this.board = new Board(this.data.rows);
   this.eMan = new EventManager(this);
 }
+
+Game.prototype.restart = function () {
+  this.board.clear();
+  this.data = JSON.parse(JSON.stringify(this.dataCopy));
+  this.players = {
+    1: new Player(this.data.players[1].color, this.data.players[1].isActive),
+    2: new Player(this.data.players[2].color, this.data.players[2].isActive),
+  };
+  this.board = new Board(this.data.rows);
+  this.init();
+};
 
 Game.prototype.init = function () {
   this.basicAI = new BasicAI(this.players[1]);
@@ -61,11 +73,14 @@ Game.prototype.nextTurn = function () {
     activePlayer.findMoves(self.data.rows);
 
     if (!activePlayer.moves.length) {
-      alert(
-        "Player " +
-          self.getInactivePlayer().color +
-          " is the winner. Thanks for playing!"
-      );
+      if (
+        confirm(
+          `Player ${
+            self.getInactivePlayer().color
+          } is the winner! Thanks for playing.\nTry again?`
+        )
+      )
+        this.restart();
     } else {
       activePlayer.updateActiveSquares();
       eMan.attachInitialListeners(activePlayer);

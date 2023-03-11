@@ -10,22 +10,14 @@ Board.prototype.clear = function () {
 Board.prototype.draw = function () {
   const board = document.getElementById("board");
   const checkerBoard = document.createElement("fieldset");
-  const frag = document.createDocumentFragment();
-  //const reset = document.createElement("input");
   const rows = this.rows;
   let row, squares;
-  //reset.type = "reset";
-  //reset.className = "reset";
-  //reset.id = "reset";
-  //reset.value = "Start Over";
   for (const rowNum in rows) {
     squares = rows[rowNum].squares;
     row = new Row(rowNum, squares);
     checkerBoard.prepend(row.draw());
   }
-  frag.appendChild(checkerBoard);
-  //frag.appendChild(reset);
-  board.appendChild(frag);
+  board.appendChild(checkerBoard);
 };
 
 Board.prototype.redraw = function () {
