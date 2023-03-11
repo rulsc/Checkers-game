@@ -1,3 +1,13 @@
+h3 {
+  font-family: tahoma, helvetica, sans-serif;
+  text-align: center;
+}
+
+blockquote {
+  font-family: garamond, georgia, serif;
+  text-align: justify;
+}
+
 form {
   width: 348px;
   margin: 0 auto;
@@ -5,6 +15,11 @@ form {
 
 fieldset {
   width: 320px;
+}
+
+#container {
+  position: relative;
+  transform: rotateX(180deg);
 }
 
 .row {
@@ -40,7 +55,7 @@ fieldset {
   display: block;
   width: 79%;
   height: 79%;
-  margin: 9%;
+  margin: 6%;
 }
 
 .black {
@@ -53,7 +68,7 @@ fieldset {
   border-color: #222;
 }
 
-.reset {
+/* .reset {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -62,7 +77,7 @@ fieldset {
   font-weight: bold;
   background-color: #b22222;
   color: #fff;
-}
+} */
 
 .highlight {
   background-color: #f5c71a;
@@ -70,16 +85,38 @@ fieldset {
 
 .highlight .checker {
   animation: spin 4s linear infinite;
-  border: 2px dashed #fff;
+}
+
+.highlight .black {
+  border: 0.15em dashed #fff;
+}
+
+.highlight .red {
+  border: 0.15em dashed #222;
+}
+
+.king {
+  opacity: 0.5;
+  background-image: url("./images/80px-Crown_of_the_Kingdom_of_Greece.svg.png");
+  transform: rotate(-180deg);
 }
 
 @keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
   100% {
     transform: rotate(360deg);
   }
 }
 
-.king {
-  opacity: 0.5;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Crown_of_the_Kingdom_of_Greece.svg/80px-Crown_of_the_Kingdom_of_Greece.svg.png");
+.ai-cover {
+  background-color: transparent;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 999;
 }
