@@ -50,15 +50,11 @@ EventManager.prototype.attachSelectionListeners = function (player) {
 
 EventManager.prototype.attachMovementListeners = function (player) {
   const self = this;
-  const game = this.game;
-  let jumps = player.jumps;
-  let moves = player.moves;
-  let move;
-  let jump;
-  let isKing;
-  if (moves.length) {
-    for (let i = 0; i < moves.length; i++) {
-      move = moves[i];
+  const game = self.game;
+  let move, jump, isKing;
+  if (player.moves.length) {
+    for (let i = 0; i < player.moves.length; i++) {
+      move = player.moves[i];
       if (
         move.start.squareNum === player.startSquare.squareNum &&
         move.end.squareNum === player.endSquare.squareNum
@@ -70,16 +66,14 @@ EventManager.prototype.attachMovementListeners = function (player) {
         break;
       }
     }
-  } else if (jumps.length) {
-    for (let i = 0; i < jumps.length; i++) {
-      jump = jumps[i];
+  } else if (player.jumps.length) {
+    for (let i = 0; i < player.jumps.length; i++) {
+      jump = player.jumps[i];
       if (
-        player.startSquare &&
         jump.start.squareNum === player.startSquare.squareNum &&
-        player.endSquare &&
         jump.end.squareNum === player.endSquare.squareNum
       ) {
-        isKing = player.startSquare.checker.isKing;
+        isKing = jump.start.checker.isKing;
         jump.execute();
         player.deselectSquares();
         player.clearJumps();
@@ -95,13 +89,14 @@ EventManager.prototype.attachMovementListeners = function (player) {
         player.startSquare = jump.end;
         player.findJumps(game.data.rows);
         if (player.jumps.length) {
-          player.updateActiveSquares.call(player, jump.end);
+          player.updateActiveSquares.call(player, player.startSquare);
           self.removeAllListeners();
           return self.attachInitialListeners(player);
         } else {
           player.endTurn();
           self.removeAllListeners();
           game.nextTurn();
+          break;
         }
       }
     }
