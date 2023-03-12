@@ -21,25 +21,25 @@ const initialData = {
       squares: {
         1: {
           checker: {
-            color: "black",
+            color: "red",
             isKing: false,
           },
         },
         2: {
           checker: {
-            color: "black",
+            color: "red",
             isKing: false,
           },
         },
         3: {
           checker: {
-            color: "black",
+            color: "red",
             isKing: false,
           },
         },
         4: {
           checker: {
-            color: "black",
+            color: "red",
             isKing: false,
           },
         },
@@ -49,25 +49,25 @@ const initialData = {
       squares: {
         5: {
           checker: {
-            color: "black",
+            color: "red",
             isKing: false,
           },
         },
         6: {
           checker: {
-            color: "black",
+            color: "red",
             isKing: false,
           },
         },
         7: {
           checker: {
-            color: "black",
+            color: "red",
             isKing: false,
           },
         },
         8: {
           checker: {
-            color: "black",
+            color: "red",
             isKing: false,
           },
         },
@@ -77,25 +77,25 @@ const initialData = {
       squares: {
         9: {
           checker: {
-            color: "black",
+            color: "red",
             isKing: false,
           },
         },
         10: {
           checker: {
-            color: "black",
+            color: "red",
             isKing: false,
           },
         },
         11: {
           checker: {
-            color: "black",
+            color: "red",
             isKing: false,
           },
         },
         12: {
           checker: {
-            color: "black",
+            color: "red",
             isKing: false,
           },
         },
@@ -121,25 +121,25 @@ const initialData = {
       squares: {
         21: {
           checker: {
-            color: "red",
+            color: "black",
             isKing: false,
           },
         },
         22: {
           checker: {
-            color: "red",
+            color: "black",
             isKing: false,
           },
         },
         23: {
           checker: {
-            color: "red",
+            color: "black",
             isKing: false,
           },
         },
         24: {
           checker: {
-            color: "red",
+            color: "black",
             isKing: false,
           },
         },
@@ -149,25 +149,25 @@ const initialData = {
       squares: {
         25: {
           checker: {
-            color: "red",
+            color: "black",
             isKing: false,
           },
         },
         26: {
           checker: {
-            color: "red",
+            color: "black",
             isKing: false,
           },
         },
         27: {
           checker: {
-            color: "red",
+            color: "black",
             isKing: false,
           },
         },
         28: {
           checker: {
-            color: "red",
+            color: "black",
             isKing: false,
           },
         },
@@ -177,25 +177,25 @@ const initialData = {
       squares: {
         29: {
           checker: {
-            color: "red",
+            color: "black",
             isKing: false,
           },
         },
         30: {
           checker: {
-            color: "red",
+            color: "black",
             isKing: false,
           },
         },
         31: {
           checker: {
-            color: "red",
+            color: "black",
             isKing: false,
           },
         },
         32: {
           checker: {
-            color: "red",
+            color: "black",
             isKing: false,
           },
         },

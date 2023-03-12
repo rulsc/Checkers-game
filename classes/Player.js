@@ -43,7 +43,7 @@ Player.prototype.findJumps = function (rows) {
     rowIsOdd = startSquare.rowNum % 2 !== 0;
     isKing = startSquare.checker.isKing;
 
-    if (this.color === "black" || isKing) {
+    if (this.color === "red" || isKing) {
       if (rowPlusTwo < 9) {
         if (rowIsOdd) {
           testSquareNum = startSquare.squareNum + 9;
@@ -68,7 +68,7 @@ Player.prototype.findJumps = function (rows) {
                     new Square(
                       rowPlusOne,
                       testSquareNum - 4,
-                      new Checker(this.color === "black" ? "red" : "black")
+                      new Checker(this.color === "red" ? "black" : "red")
                     )
                   )
                 );
@@ -98,7 +98,7 @@ Player.prototype.findJumps = function (rows) {
                     new Square(
                       rowPlusOne,
                       testSquareNum - 3,
-                      new Checker(this.color === "black" ? "red" : "black")
+                      new Checker(this.color === "red" ? "black" : "red")
                     )
                   )
                 );
@@ -129,7 +129,7 @@ Player.prototype.findJumps = function (rows) {
                     new Square(
                       rowPlusOne,
                       testSquareNum - 5,
-                      new Checker(this.color === "black" ? "red" : "black")
+                      new Checker(this.color === "red" ? "black" : "red")
                     )
                   )
                 );
@@ -159,7 +159,7 @@ Player.prototype.findJumps = function (rows) {
                     new Square(
                       rowPlusOne,
                       testSquareNum - 4,
-                      new Checker(this.color === "black" ? "red" : "black")
+                      new Checker(this.color === "red" ? "black" : "red")
                     )
                   )
                 );
@@ -170,7 +170,7 @@ Player.prototype.findJumps = function (rows) {
       }
     }
 
-    if (this.color === "red" || isKing) {
+    if (this.color === "black" || isKing) {
       if (rowMinusTwo > 0) {
         if (rowIsOdd) {
           testSquareNum = startSquare.squareNum - 7;
@@ -195,7 +195,7 @@ Player.prototype.findJumps = function (rows) {
                     new Square(
                       rowMinusOne,
                       testSquareNum + 4,
-                      new Checker(this.color === "black" ? "red" : "black")
+                      new Checker(this.color === "red" ? "black" : "red")
                     )
                   )
                 );
@@ -225,7 +225,7 @@ Player.prototype.findJumps = function (rows) {
                     new Square(
                       rowMinusOne,
                       testSquareNum + 5,
-                      new Checker(this.color === "black" ? "red" : "black")
+                      new Checker(this.color === "red" ? "black" : "red")
                     )
                   )
                 );
@@ -256,7 +256,7 @@ Player.prototype.findJumps = function (rows) {
                     new Square(
                       rowMinusOne,
                       testSquareNum + 3,
-                      new Checker(this.color === "black" ? "red" : "black")
+                      new Checker(this.color === "red" ? "black" : "red")
                     )
                   )
                 );
@@ -286,7 +286,7 @@ Player.prototype.findJumps = function (rows) {
                     new Square(
                       rowMinusOne,
                       testSquareNum + 4,
-                      new Checker(this.color === "black" ? "red" : "black")
+                      new Checker(this.color === "red" ? "black" : "red")
                     )
                   )
                 );
@@ -311,7 +311,7 @@ Player.prototype.findJumps = function (rows) {
             rowIsOdd = +rowNum % 2 !== 0;
             isKing = square.checker.isKing;
 
-            if (this.color === "black" || isKing) {
+            if (this.color === "red" || isKing) {
               if (rowPlusTwo < 9) {
                 if (rowIsOdd) {
                   testSquareNum = +squareNum + 9;
@@ -338,7 +338,7 @@ Player.prototype.findJumps = function (rows) {
                               rowPlusOne,
                               testSquareNum - 4,
                               new Checker(
-                                this.color === "black" ? "red" : "black"
+                                this.color === "red" ? "black" : "red"
                               )
                             )
                           )
@@ -371,7 +371,7 @@ Player.prototype.findJumps = function (rows) {
                               rowPlusOne,
                               testSquareNum - 3,
                               new Checker(
-                                this.color === "black" ? "red" : "black"
+                                this.color === "red" ? "black" : "red"
                               )
                             )
                           )
@@ -405,7 +405,7 @@ Player.prototype.findJumps = function (rows) {
                               rowPlusOne,
                               testSquareNum - 5,
                               new Checker(
-                                this.color === "black" ? "red" : "black"
+                                this.color === "red" ? "black" : "red"
                               )
                             )
                           )
@@ -438,7 +438,7 @@ Player.prototype.findJumps = function (rows) {
                               rowPlusOne,
                               testSquareNum - 4,
                               new Checker(
-                                this.color === "black" ? "red" : "black"
+                                this.color === "red" ? "black" : "red"
                               )
                             )
                           )
@@ -450,7 +450,7 @@ Player.prototype.findJumps = function (rows) {
               }
             }
 
-            if (this.color === "red" || isKing) {
+            if (this.color === "black" || isKing) {
               if (rowMinusTwo > 0) {
                 if (rowIsOdd) {
                   testSquareNum = +squareNum - 7;
@@ -477,7 +477,7 @@ Player.prototype.findJumps = function (rows) {
                               rowMinusOne,
                               testSquareNum + 4,
                               new Checker(
-                                this.color === "black" ? "red" : "black"
+                                this.color === "red" ? "black" : "red"
                               )
                             )
                           )
@@ -510,7 +510,7 @@ Player.prototype.findJumps = function (rows) {
                               rowMinusOne,
                               testSquareNum + 5,
                               new Checker(
-                                this.color === "black" ? "red" : "black"
+                                this.color === "red" ? "black" : "red"
                               )
                             )
                           )
@@ -544,7 +544,7 @@ Player.prototype.findJumps = function (rows) {
                               rowMinusOne,
                               testSquareNum + 3,
                               new Checker(
-                                this.color === "black" ? "red" : "black"
+                                this.color === "red" ? "black" : "red"
                               )
                             )
                           )
@@ -577,7 +577,7 @@ Player.prototype.findJumps = function (rows) {
                               rowMinusOne,
                               testSquareNum + 4,
                               new Checker(
-                                this.color === "black" ? "red" : "black"
+                                this.color === "red" ? "black" : "red"
                               )
                             )
                           )
@@ -615,7 +615,7 @@ Player.prototype.findMoves = function (rows) {
     rowIsOdd = startSquare.rowNum % 2 !== 0;
     isKing = startSquare.checker.isKing;
 
-    if (this.color === "black" || isKing) {
+    if (this.color === "red" || isKing) {
       if (rowPlusOne < 9) {
         if (rowIsOdd) {
           testSquareNum = startSquare.squareNum + 5;
@@ -698,7 +698,7 @@ Player.prototype.findMoves = function (rows) {
       }
     }
 
-    if (this.color === "red" || isKing) {
+    if (this.color === "black" || isKing) {
       if (rowMinusOne > 0) {
         if (rowIsOdd) {
           // row is odd
@@ -794,7 +794,7 @@ Player.prototype.findMoves = function (rows) {
             rowIsOdd = +rowNum % 2 !== 0;
             isKing = square.checker.isKing;
 
-            if (this.color === "black" || isKing) {
+            if (this.color === "red" || isKing) {
               if (rowPlusOne < 9) {
                 if (rowIsOdd) {
                   testSquareNum = +squareNum + 5;
@@ -877,7 +877,7 @@ Player.prototype.findMoves = function (rows) {
               }
             }
 
-            if (this.color === "red" || isKing) {
+            if (this.color === "black" || isKing) {
               if (rowMinusOne > 0) {
                 if (rowIsOdd) {
                   testSquareNum = +squareNum - 3;

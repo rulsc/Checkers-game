@@ -32,7 +32,7 @@ Jump.prototype.save = function () {
 Jump.prototype.kingCheck = function () {
   const color = this.end.checker.color;
   const endRow = +this.end.rowNum;
-  if (color === "black") {
+  if (color === "red") {
     if (endRow === 8) {
       this.end.checker.crown();
     }

@@ -82,7 +82,6 @@ fieldset {
 
 #container {
   position: relative;
-  transform: rotateX(180deg);
 }
 
 .row {
@@ -150,7 +149,6 @@ fieldset {
 .king {
   opacity: 0.5;
   background-image: url("./images/80px-Crown_of_the_Kingdom_of_Greece.svg.png");
-  transform: rotate(-180deg);
 }
 
 @keyframes spin {
