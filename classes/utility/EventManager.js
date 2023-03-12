@@ -103,6 +103,28 @@ EventManager.prototype.attachMovementListeners = function (player) {
   }
 };
 
+EventManager.prototype.attachModalListeners = function () {
+  const self = this;
+  const game = self.game;
+  const resetBtn = document.getElementsByTagName("button")[0];
+  const closeBtn = document.getElementsByTagName("button")[1];
+  const span = document.getElementsByClassName("close")[0];
+  const modal = document.getElementById("myModal");
+
+  resetBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+    game.restart();
+  });
+
+  closeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  span.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+};
+
 EventManager.prototype.removeAllListeners = function (elem = null) {
   if (elem) {
     elem.classList.remove("highlight");

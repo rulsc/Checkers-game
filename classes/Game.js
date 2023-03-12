@@ -7,6 +7,7 @@ function Game(data) {
   };
   this.board = new Board(this.data.rows);
   this.eMan = new EventManager(this);
+  this.eMan.attachModalListeners();
 }
 
 Game.prototype.restart = function () {
@@ -65,6 +66,8 @@ Game.prototype.toggleActivePlayer = function () {
 Game.prototype.nextTurn = function () {
   const self = this;
   const eMan = self.eMan;
+  const modal = document.getElementById("myModal");
+  const message = document.getElementById("message");
   let activePlayer;
   self.toggleActivePlayer();
   activePlayer = self.getActivePlayer();
@@ -73,14 +76,12 @@ Game.prototype.nextTurn = function () {
     activePlayer.findMoves(self.data.rows);
 
     if (!activePlayer.moves.length) {
-      if (
-        confirm(
-          `Player ${
-            self.getInactivePlayer().color
-          } is the winner! Thanks for playing.\nTry again?`
-        )
-      )
-        this.restart();
+      message.textContent = `Player ${
+        self.getInactivePlayer().color
+      } is the winner! Thanks for playing.
+      Try again?`;
+
+      modal.style.display = "block";
     } else {
       activePlayer.updateActiveSquares();
       eMan.attachInitialListeners(activePlayer);
