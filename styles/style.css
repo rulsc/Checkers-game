@@ -118,6 +118,7 @@ fieldset {
   width: 79%;
   height: 79%;
   margin: 6%;
+  margin: 6%;
 }
 
 .black {
@@ -152,6 +153,9 @@ fieldset {
 }
 
 @keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
   0% {
     transform: rotate(0deg);
   }
