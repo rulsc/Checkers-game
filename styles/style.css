@@ -134,9 +134,9 @@ fieldset {
   background-color: #f5c71a;
 }
 
-.highlight .checker {
+/* .highlight .checker {
   animation: spin 4s linear infinite;
-}
+} */
 
 .highlight .black {
   border: 0.15em dashed #fff;
@@ -146,19 +146,26 @@ fieldset {
   border: 0.15em dashed #222;
 }
 
+.selected {
+  position: relative;
+  top: -20%;
+  left: 20%;
+  box-shadow: -1vw 1vw 1vw 0 rgba(0, 0, 0, 0.75);
+}
+
 .king {
   opacity: 0.5;
   background-image: url("./images/80px-Crown_of_the_Kingdom_of_Greece.svg.png");
 }
 
-@keyframes spin {
+/* @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
   }
-}
+} */
 
 .ai-cover {
   background-color: transparent;
