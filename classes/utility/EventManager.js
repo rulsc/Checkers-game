@@ -14,9 +14,9 @@ EventManager.prototype.attachInitialListeners = function (player) {
     el.addEventListener("click", function (e) {
       e.stopImmediatePropagation();
       self.attachSelectionListeners(player);
-      document
-        .querySelectorAll(".checker")
-        .forEach((el) => el.classList.remove("selected"));
+      document.querySelectorAll(".highlight > .checker").forEach((el) => {
+        el.classList.remove("selected");
+      });
       if (e.target.classList.contains("square")) {
         e.target.firstChild.classList.add("selected");
       } else {
