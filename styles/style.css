@@ -146,11 +146,18 @@ fieldset {
   border: 0.15em dashed #222;
 }
 
-.selected {
+.black.selected {
+  position: relative;
+  top: 20%;
+  left: -20%;
+  box-shadow: 2vw 2vw 1vw 0 rgba(0, 0, 0, 0.75);
+}
+
+.red.selected {
   position: relative;
   top: -20%;
   left: 20%;
-  box-shadow: -1vw 1vw 1vw 0 rgba(0, 0, 0, 0.75);
+  box-shadow: -2vw 2vw 1vw 0 rgba(0, 0, 0, 0.75);
 }
 
 .king {
